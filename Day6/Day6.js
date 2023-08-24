@@ -1,4 +1,4 @@
-
+/*
 for(let i = 0; i <= 10; i++){               
     console.log(i)
 }
@@ -14,7 +14,7 @@ let i = 0
 do {
     console.log(i)
     i++
-} while (i <= 10)*/
+} while (i <= 10)
 
 for(let i = 10; i >=0; i--){
     console.log(i)
@@ -96,7 +96,7 @@ for (let i = 0; i <= 100; i++) {
 
 console.log("Çift Sayıların Toplamı:", evenTotal);
 console.log("Olasılıkların Toplamı:", probabilityTotal);
-console.log("Çift Sayılar:", evenNumbers); */
+console.log("Çift Sayılar:", evenNumbers); 
 const arrRandom = []
 
 for(let i=0 ; i<5 ; i++){
@@ -134,3 +134,4 @@ id += chars[randomNum]
 }
 
 console.log(id)
+*/
