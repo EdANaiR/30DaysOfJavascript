@@ -1,0 +1,98 @@
+   -FUNCTİONS-
+   
+1) DECLARATİON FUNCTİONS
+2) EXPRESSİON    // 
+3) ANONYMOUS     //
+4) ARROW
+
+
+** DECLARATİON FUNCTİONS **
+
+function functionName(){                           function sayHello() {
+    //code                                             console.log("hello!")
+}                                ==>               }
+functionName()                                     sayHello();
+
+*)Fonksiyon içinde veya dışında değişken tanımlanabilir.
+*)Fonksiyonlar geriye değerler döndürür.
+*)Fonksiyon geriye bir şey döndürmezse UNDEFINED döndürür.
+*)Değer yazdırmak yerine return yani geriye döndürebiliriz.
+
+function sayHello() {
+    let msg = "hello world"
+    return msg
+}
+
+*)Farklı türlerde parametre gönderebiliriz.
+
+function multiply(num1, num2) {
+    return num1 * num2
+}
+let total = multiply(5, 2)
+console.log(total)  
+
+*)Parametre sayımı bilmiyor ya da tek tek almak istemiyorsam ARGUMENTS kullanırım.
+
+function sumAllNums() {
+  console.log(arguments)          
+}                               ==> Arguments(4) [1, 2, 3, 4]
+
+sumAllNums(1, 2, 3, 4)
+
+function sumAllNums() {
+  let sum = 0                                     // toplamı hesaplamak için kullanılanacak
+  for (let i = 0; i < arguments.length; i++) {    // Döngü, arguments adlı özel bir nesnenin uzunluğu kadar dönecek.
+    sum += arguments[i]                           // Argüman değerleri toplamı sum'a ekleniyor.
+  }
+  return sum
+}
+
+console.log(sumAllNums(1, 2, 3, 4))       // 10
+
+* ANONYMOUS FUNCTİONS *  İSİMSİZ-ANONİM FONKSİYON
+bu fonksiyonu sadece bir kere kullanacak, 
+başka yerlerde tekrar kullanmayacak.
+Dolayısıyla adına pek gerek yok.
+ "Hadi, sadece burada kullanacağım bir fonksiyon oluşturayım.
+  Adını unuturum zaten, ama işimi görsün yeter."  MANTIĞIYLA Anlayabilirsin..
+
+const anonymousFun = function() {
+  console.log(
+
+  )
+}
+
+* EXPRESSİON FUNCTİONS *
+
+(function(n) {                  //Kendi kendini çağıran Fonksiyon
+  console.log(n * n)
+})(2)                   // 4
+
+* ARROW FUNCTİONS *
+
+*) Arrow fonksiyonlarında function kelimesi yerine => işareti kullanılır.
+
+function hello(name) {          
+  return `hello ${name}`                         //Regular function
+}
+
+const hello1 = name => `hello ${name}`          //Arrow function
+
+*) Arrow fonksiyonlarda Arguments yoktur.
+*) REST Operatörü kullanılır.
+Bir nevi, elimizdeki fazladan parametreleri ya da 
+elemanları toplu halde yakalamak için kullanılır.
+Diyelim ki bir işlev yazıyorsunuz ve bu işlev herhangi bir sayıda parametre alabiliyor.
+ İşte burada rest operatörü devreye girer.
+
+const toplama = (...numbers) => {               
+    console.log(numbers)
+}
+toplama(2, 5, 7, 10)
+
+const toplama = (num1, ...numbers) => {
+  console.log(num1)                               // 2
+  console.log(numbers)                           // [5, 7, 8, 10]
+}                                               // Kalanları dizi halinde verir 
+toplama(2, 5, 7, 8, 10)
+
