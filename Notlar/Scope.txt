@@ -1,0 +1,86 @@
+- SCOPE - (Kapsam)
+
+*) Değişken tanımlamak için let, var ve const kullanabiliriz.
+*) Var veya let ile bir değişken tanımlamadıysan otomatik window objesinin altında görünecektir.
+   yani o an açık olan pencereyi temsil edecek olan sayfa.
+Yani;
+
+name= 'Tayfun'    //window scope 
+(sayfanın konsolunda window.name dersek Tayfuna erişmiş olacağız.)
+*) Süslü parantezlerin arasında kalan kısma blok denir.
+
+** GLOBAL SCOPE **
+
+let name    = 'Sun'                        *Global Scope*
+let surname = 'June'
+
+function letsLearnScope() {
+    console.log(name, surname)             // Sun June
+    if(true) {
+        let name    = 'winter'              *Local Scope*
+        let surname = 'february'
+        console.log(name, surname)         // winter february
+    }
+    console.log(name, surname)             // Sun June
+}
+letsLearnScope()
+console.log(name, surname)                 // Sun June
+
+
+** OBJECT **    (NESNE)
+ 
+ const person = {
+  firstName: 'Asabeneh',
+  lastName: 'Yetayeh',
+  age: 250,
+  country: 'Finland',
+  city: 'Helsinki',
+  skills: [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Node',
+    'MongoDB',
+    'Python',
+    'D3.js'
+  ],
+  isMarried: true
+}
+console.log(person)
+
+* NESNEDEN DEĞER ALMA *
+*) .Kullanarak
+*) köşeli parantez 
+
+const person = {
+  firstName: 'Asabeneh',
+  lastName: 'Yetayeh',
+  age: 250,
+  country: 'Finland',
+  txt: {
+    try: 'try txt'
+  },
+  city: 'Helsinki',
+  skills: [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Node',
+    'MongoDB',
+    'Python',
+    'D3.js'
+  ]
+}
+console.log(person.firstName)          // Nokta kullanarak değer alma 
+console.log(person.lastName)
+console.log(person.age)
+console.log(person.txt.try)            //61Lıne
+
+*) this.  objenin içine erişir
+
+*) Object.keys() kullanarak nesne anahtarlarını alma
+*) Object.values() kullanarak nesne değerlerini alma
+*) Object.entries() kullanarak nesne anahtarlarını ve değerlerini alma
+*) hasOwnProperty() kullanarak özellikleri kontrol etme

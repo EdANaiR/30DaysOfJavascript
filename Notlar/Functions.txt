@@ -1,5 +1,5 @@
    -FUNCTİONS-
-   
+     
 1) DECLARATİON FUNCTİONS
 2) EXPRESSİON    // 
 3) ANONYMOUS     //
